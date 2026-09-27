@@ -3,51 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive FAQ</title>
+    <title>Student Registration Form</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            padding: 30px;
+            background-color: #f2f2f2;
         }
 
         .container {
-            max-width: 700px;
-            margin: auto;
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
         }
 
-        h1 {
+        h2 {
             text-align: center;
             color: #333;
         }
 
-        .faq {
-            background: white;
-            margin: 12px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px gray;
-            overflow: hidden;
-        }
-
-        .question {
-            padding: 18px;
-            cursor: pointer;
-            font-size: 18px;
+        label {
+            display: block;
+            margin-top: 12px;
             font-weight: bold;
-            display: flex;
-            justify-content: space-between;
         }
 
-        .question:hover {
-            background: #e8f0fe;
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
         }
 
-        .answer {
-            display: none;
-            padding: 0 18px 18px;
-            color: #555;
-            line-height: 1.5;
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -55,267 +66,79 @@
 <body>
 
 <div class="container">
+    <h2>Student Registration</h2>
 
-    <h1>Frequently Asked Questions</h1>
+    <form id="registrationForm">
 
-    <!-- 1 -->
-    <div class="faq">
-        <div class="question">
-            What is HTML?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            HTML stands for HyperText Markup Language. It creates the structure of a webpage.
-        </div>
-    </div>
+        <label>Student Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
 
-    <!-- 2 -->
-    <div class="faq">
-        <div class="question">
-            What is CSS?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            CSS stands for Cascading Style Sheets. It is used to style webpages.
-        </div>
-    </div>
+        <label>Email</label>
+        <input type="text" id="email" placeholder="Enter your email">
 
-    <!-- 3 -->
-    <div class="faq">
-        <div class="question">
-            What is JavaScript?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            JavaScript is a programming language used to make webpages interactive.
-        </div>
-    </div>
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
 
-    <!-- 4 -->
-    <div class="faq">
-        <div class="question">
-            What is DOM?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            DOM stands for Document Object Model. It represents the HTML document as objects.
-        </div>
-    </div>
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" placeholder="Enter mobile number">
 
-    <!-- 5 -->
-    <div class="faq">
-        <div class="question">
-            What is an Event Listener?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            An event listener waits for an event such as click, mouseover, or keypress.
-        </div>
-    </div>
+        <button type="submit">Register</button>
 
-    <!-- 6 -->
-    <div class="faq">
-        <div class="question">
-            What is a variable?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            A variable is used to store data values in a program.
-        </div>
-    </div>
-
-    <!-- 7 -->
-    <div class="faq">
-        <div class="question">
-            What is a function?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            A function is a reusable block of code that performs a specific task.
-        </div>
-    </div>
-
-    <!-- 8 -->
-    <div class="faq">
-        <div class="question">
-            What is an array?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            An array is a collection of multiple values stored in a single variable.
-        </div>
-    </div>
-
-    <!-- 9 -->
-    <div class="faq">
-        <div class="question">
-            What is a loop?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            A loop repeatedly executes a block of code until a condition is satisfied.
-        </div>
-    </div>
-
-    <!-- 10 -->
-    <div class="faq">
-        <div class="question">
-            What is an if-else statement?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            If-else is a conditional statement used to execute code based on a condition.
-        </div>
-    </div>
-
-    <!-- 11 -->
-    <div class="faq">
-        <div class="question">
-            What is getElementById()?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            getElementById() selects an HTML element using its unique ID.
-        </div>
-    </div>
-
-    <!-- 12 -->
-    <div class="faq">
-        <div class="question">
-            What is querySelector()?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            querySelector() selects the first HTML element matching a CSS selector.
-        </div>
-    </div>
-
-    <!-- 13 -->
-    <div class="faq">
-        <div class="question">
-            What is querySelectorAll()?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            querySelectorAll() selects all elements matching a CSS selector.
-        </div>
-    </div>
-
-    <!-- 14 -->
-    <div class="faq">
-        <div class="question">
-            What is an object in JavaScript?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            An object stores data in the form of properties and values.
-        </div>
-    </div>
-
-    <!-- 15 -->
-    <div class="faq">
-        <div class="question">
-            What is an operator?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            An operator is a symbol used to perform operations on values.
-        </div>
-    </div>
-
-    <!-- 16 -->
-    <div class="faq">
-        <div class="question">
-            What is an event in JavaScript?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            An event is an action such as clicking a button, pressing a key, or moving the mouse.
-        </div>
-    </div>
-
-    <!-- 17 -->
-    <div class="faq">
-        <div class="question">
-            What is innerHTML?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            innerHTML is used to get or change the HTML content of an element.
-        </div>
-    </div>
-
-    <!-- 18 -->
-    <div class="faq">
-        <div class="question">
-            What is textContent?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            textContent is used to get or change the text inside an HTML element.
-        </div>
-    </div>
-
-    <!-- 19 -->
-    <div class="faq">
-        <div class="question">
-            What is nextElementSibling?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            nextElementSibling returns the next HTML element of the selected element.
-        </div>
-    </div>
-
-    <!-- 20 -->
-    <div class="faq">
-        <div class="question">
-            Why is JavaScript used in websites?
-            <span>+</span>
-        </div>
-        <div class="answer">
-            JavaScript is used to add dynamic behavior and interactive features to websites.
-        </div>
-    </div>
-
+        <p id="message"></p>
+    </form>
 </div>
 
-
 <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
 
-    // Select all questions
-    const questions = document.querySelectorAll(".question");
+        event.preventDefault();
 
-    // Add click event to every question
-    questions.forEach(function(question) {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value;
+        let mobile = document.getElementById("mobile").value.trim();
+        let message = document.getElementById("message");
 
-        question.addEventListener("click", function() {
+        // Mandatory field validation
+        if (name === "" || email === "" || password === "" || mobile === "") {
+            message.innerHTML = "Please fill all mandatory fields.";
+            message.style.color = "red";
+            return;
+        }
 
-            // Get corresponding answer
-            const answer = question.nextElementSibling;
+        // Email format validation
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            // Get + or - symbol
-            const icon = question.querySelector("span");
+        if (!emailPattern.test(email)) {
+            message.innerHTML = "Please enter a valid email address.";
+            message.style.color = "red";
+            return;
+        }
 
-            // Show or hide answer
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-                icon.textContent = "+";
-            }
-            else {
-                answer.style.display = "block";
-                icon.textContent = "-";
-            }
+        // Password length validation
+        if (password.length < 8) {
+            message.innerHTML = "Password must contain at least 8 characters.";
+            message.style.color = "red";
+            return;
+        }
 
-        });
+        // Mobile number validation
+        let mobilePattern = /^[0-9]{10}$/;
 
+        if (!mobilePattern.test(mobile)) {
+            message.innerHTML = "Mobile number must contain exactly 10 digits.";
+            message.style.color = "red";
+            return;
+        }
+
+        // Successful submission
+        message.innerHTML = "Registration successful!";
+        message.style.color = "green";
+
+        document.getElementById("registrationForm").reset();
     });
-
 </script>
 
 </body>
 </html>
-
-
-
 
